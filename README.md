@@ -3,9 +3,9 @@ FXServer ESX Repairvehicle
 
 [REQUIREMENTS]
 
-   • Dependencies For Full Working
-	- es_extended => https://github.com/ESX-Org/es_extended
-	- esx_mecanojob => https://github.com/ESX-Org/esx_mecanojob
+	• Dependencies For Full Working
+		- es_extended => https://github.com/ESX-Org/es_extended
+		- esx_mecanojob => https://github.com/ESX-Org/esx_mecanojob
 
 
 [INSTALLATION]
