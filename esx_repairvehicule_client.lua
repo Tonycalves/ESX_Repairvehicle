@@ -82,6 +82,6 @@ AddEventHandler('esx_repairvehicule:success', function (price)
 end)
 
 RegisterNetEvent('esx_repairvehicule:notenoughmoney')
-AddEventHandler('esx_repairvehicule:notenoughmoney', function (moneyleft)
-	esx_repairvehicule_DrawNotification("~h~~r~Vous n'avez pas assez d'argent! Il vous manque $ " .. moneyleft)
+AddEventHandler('esx_repairvehicule:notenoughmoney', function ()
+	esx_repairvehicule_DrawNotification("~h~~r~Vous n'avez pas assez d'argent!")
 end)

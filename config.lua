@@ -4,7 +4,6 @@
 
 Config = {}
 
-Config.enableprice = true
 Config.Price = 15000
 
 Config.DrawDistance = 100.0

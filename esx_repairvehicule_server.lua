@@ -21,18 +21,17 @@ end
 CountMecano()
 
 RegisterServerEvent('esx_repairvehicule:checkmoney')
-AddEventHandler('esx_repairvehicule:checkmoney', function ()
+
+AddEventHandler('esx_repairvehicule:checkmoney', function()
 	TriggerEvent('es:getPlayerFromId', source, function (user)
-		if mecanoConnected <= 0 then
-			if Config.enableprice == true then
-				userMoney = user.getMoney()
-				if userMoney >= Config.price then
-					user.removeMoney(Config.price)
-					TriggerClientEvent('esx_repairvehicule:success', source, Config.price)
-				else
-					moneyleft = Config.price - userMoney
-					TriggerClientEvent('esx_repairvehicule:notenoughmoney', source, moneyleft)
-				end
+		local price = tonumber(Config.Price)
+		local moneyuser = user.getMoney()
+		if mecanoConnected == 0 then
+			if moneyuser >= price then
+				user.removeMoney(price)
+				TriggerClientEvent('esx_repairvehicule:success', source, price)
+			else
+				TriggerClientEvent('esx_repairvehicule:notenoughmoney', source)
 			end
 		else
 			TriggerClientEvent('esx:showNotification', source, "~h~~r~Un mécano est en ville, contactez le !")
